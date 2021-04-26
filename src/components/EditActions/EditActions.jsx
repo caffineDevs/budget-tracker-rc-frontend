@@ -35,7 +35,7 @@ function EditActions(props) {
   const handleSave = () => {
     switch (crudAction) {
       case "Add":
-        axios.post("http://localhost:8080/add", FormState).then((res) => {
+        axios.post("https://budget-tracker-backend-node.herokuapp.com/add", FormState).then((res) => {
           setExpenses([...expenses, FormState]);
           props.onHide();
         });
@@ -43,7 +43,7 @@ function EditActions(props) {
 
       case "Edit":
         axios
-          .put(`http://localhost:8080/edit/${expenses[Index]._id}`, FormState)
+          .put(`https://budget-tracker-backend-node.herokuapp.com/edit/${expenses[Index]._id}`, FormState)
           .then((res) => {
             setExpenses((prevExpenses) => {
               prevExpenses[Index] = FormState;
