@@ -39,7 +39,7 @@ function Home() {
     if (Index != undefined) {
       const url = `https://budget-tracker-backend-node.herokuapp.com/del/${expenses[Index]._id}`;
       axios
-        .delete(url)
+        .delete(url,{id:expenses[Index]._id})
         .then((res) => {
           // setExpenses((prevExpenses) => {
           //   return prevExpenses.splice(Index, 1);;
