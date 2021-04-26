@@ -41,9 +41,9 @@ function Home() {
       axios
         .delete(url,{id:expenses[Index]._id})
         .then((res) => {
-          // setExpenses((prevExpenses) => {
-          //   return prevExpenses.splice(Index, 1);;
-          // });
+          setExpenses((prevExpenses) => {
+            return prevExpenses.splice(Index, 1);;
+          });
         });
     }
   };
