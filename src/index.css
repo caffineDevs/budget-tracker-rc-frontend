@@ -1,13 +1,116 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+table,
+th,
+td {
+  border: 1px solid rgb(211, 211, 211);
+  border-collapse: collapse;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+th,
+td {
+  padding: 10px;
+}
+
+tr:nth-child(1) {
+  background-color: transparent !important;
+}
+
+tr:nth-child(2n) {
+  background-color: rgb(255, 243, 242);
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(255, 255, 245);
+}
+
+th {
+  color: rgb(0, 132, 255);
+}
+
+td:nth-child(3n) {
+  color: red;
+}
+
+
+
+.inr {
+  height: 12px;
+  margin-right: 15px;
+}
+
+.save-icon {
+  height: 15px;
+  cursor: pointer;
+  margin: 0 5px;
+  display: block;
+}
+
+td:nth-child(2n) {
+  width: 80%;
+}
+
+td:nth-child(4n+1) {
+  color:red !important;
+  width: 20%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+table {
+  max-width: 90vw;
+  margin: auto;
+}
+
+.total {
+  color: red;
+  background-color: white
+}
+
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+
+.center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.editors {
+  width: 98%;
+  border: none;
+  height: 28px;
+  border-radius: 4px;
+  padding: 0 15px;
+}
+
+.editors:focus {
+  outline: none;
+}
+
+
+.add-snippet-btn {
+  position: fixed;
+  bottom: 0.5vw;
+  right: 0.5vw;
+}
+
+.add-snippet-btn img{
+  width:3.5vw;
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
