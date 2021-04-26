@@ -84,7 +84,7 @@ function Home() {
             <th>Expenses</th>
             <th>Edit</th>
           </tr>
-          {expenses.length &&
+          {!!expenses.length &&
             expenses.map((expense, index) => {
               return (
                 <tr
@@ -119,7 +119,7 @@ function Home() {
             <td className="total"></td>
             <td colSpan="2" className="total">
               <img src={inr} className="inr" />
-              {expenses.length &&
+              {!!expenses.length &&
                 expenses
                   .map((expense) => +expense.amount)
                   .reduce(
@@ -131,7 +131,7 @@ function Home() {
         </tbody>
       </table>
 
-      {modalShow && (
+      {!!modalShow && (
         <EditActions
           show={modalShow}
           onHide={() => setModalShow(false)}
