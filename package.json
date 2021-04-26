@@ -1,5 +1,6 @@
 {
   "name": "budget-tracker",
+  "homepage": "http://caffinedevs.github.io/budget-tracker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
