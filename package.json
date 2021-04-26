@@ -1,6 +1,6 @@
 {
   "name": "budget-tracker",
-  "homepage": "http://caffinedevs.github.io/budget-tracker",
+  "homepage": "http://caffinedevs.github.io/budget-tracker-rc-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
