@@ -13,7 +13,7 @@ function Home() {
   const [expenses, setExpenses] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/get").then((res) => {
+    axios.get("https://budget-tracker-backend-node.herokuapp.com/get").then((res) => {
       setExpenses(res.data.expenses);
     });
   }, []);
@@ -38,7 +38,7 @@ function Home() {
   const handleDelete = () => {
     if (Index != undefined) {
       axios
-        .delete(`http://localhost:8080/del/${expenses[Index]._id}`)
+        .delete(`https://budget-tracker-backend-node.herokuapp.com/del/${expenses[Index]._id}`)
         .then((res) => {
           // setExpenses((prevExpenses) => {
           //   return prevExpenses.splice(Index, 1);;
